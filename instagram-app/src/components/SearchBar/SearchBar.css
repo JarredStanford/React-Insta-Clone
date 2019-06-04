@@ -1,0 +1,57 @@
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.6rem 2rem;
+}
+
+.logos {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+.camera-logo img {
+  width: 24px;
+  height: 24px;
+}
+
+.script-logo {
+  height: 29px;
+  width: 103px;
+}
+
+.divider {
+  background-color: #262626;
+  height: 28px;
+  margin: 0 16px;
+  width: 1px;
+}
+
+.search {
+  flex: 0 1 auto;
+  min-width: 125px;
+  width: 215px;
+}
+
+.search input {
+  flex: 1;
+  border: solid 1px #dbdbdb;
+  border-radius: 3px;
+  color: #262626;
+  outline: 0;
+  padding: 3px 20px 3px 20px;
+  text-align: center;
+}
+
+.header-logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.header-logos p {
+  margin-left: 3rem;
+}

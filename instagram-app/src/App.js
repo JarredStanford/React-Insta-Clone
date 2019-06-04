@@ -13,9 +13,9 @@ import dummyData from "./dummy-data";
 function App() {
   return (
     <div className="App">
-      <div>
+      <header>
         <SearchBar />
-      </div>
+      </header>
       <div>
         <h1>
           {dummyData.map(data => (
