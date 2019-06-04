@@ -1,0 +1,17 @@
+.comment-section {
+  font-size: 2rem;
+  text-align: initial;
+}
+
+.comment-icons {
+  display: flex;
+  flex-direction: row;
+}
+
+.comment-icons a {
+  padding: 0.2rem;
+}
+
+.like-counter p {
+  margin: 0;
+}

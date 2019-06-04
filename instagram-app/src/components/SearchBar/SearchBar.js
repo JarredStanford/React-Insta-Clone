@@ -7,11 +7,11 @@ const SearchBar = props => {
   return (
     <nav>
       <div className="logos">
-        <a href="http://localhost:3000/?" className="camera-logo">
+        <a href="#" className="camera-logo">
           <img src="https://i.imgur.com/AS5Embp.png" alt="Logo" />
         </a>
         <div className="divider" />
-        <a href="http://localhost:3000/?">
+        <a href="#">
           <img
             className="script-logo"
             src="https://i.imgur.com/24NDDNh.jpg"
@@ -19,8 +19,13 @@ const SearchBar = props => {
           />
         </a>
       </div>
-      <form className="search">
-        <input placeholder="Search" />
+      <form onSubmit={props.search} className="search">
+        <input
+          placeholder="Search"
+          onChange={props.handle}
+          name="username"
+          value={props.username}
+        />
       </form>
       <div className="header-logos">
         <p>1</p>
