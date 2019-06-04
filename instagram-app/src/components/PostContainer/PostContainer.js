@@ -1,5 +1,6 @@
 import React from "react";
 import CommentSection from "../CommentSection/CommentSection";
+import PropTypes from "prop-types";
 
 const PostContainer = props => {
   return (
@@ -15,6 +16,15 @@ const PostContainer = props => {
       </h1>
     </div>
   );
+};
+
+PostContainer.propTypes = {
+  dataOnProps: PropTypes.shape({
+    imageUrl: PropTypes.string.isRequired,
+    thumbnailUrl: PropTypes.string.isRequired,
+    timestamp: PropTypes.string.isRequired,
+    comments: PropTypes.array.isRequired
+  })
 };
 
 export default PostContainer;
