@@ -2,7 +2,7 @@ import React from "react";
 
 //components
 import PostsPage from "./components/PostContainer/PostsPage";
-import withAuthenticate from "./authentication/withAuthenticate";
+import withAuthenticate from "./components/authentication/withAuthenticate";
 import Login from "./components/LoginPage/Login";
 //styles
 import "./App.css";
