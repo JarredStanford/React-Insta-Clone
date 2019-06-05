@@ -18,16 +18,16 @@ class CommentSection extends React.Component {
     this.setState({
       commentsData: this.props.comments,
       text: "",
-      counter: 0
+      likes: this.props.likes
     });
   }
 
   addLike = e => {
     e.preventDefault();
-    console.log(this.state.counter);
+    console.log(this.state.likes);
     this.setState(prevState => {
       return {
-        counter: prevState.counter + 1
+        likes: prevState.likes + 1
       };
     });
   };
@@ -59,7 +59,7 @@ class CommentSection extends React.Component {
           <button>comments</button>
         </div>
         <div className="like-counter">
-          <p>{this.state.counter} likes</p>
+          <p>{this.state.likes} likes</p>
         </div>
         {this.state.commentsData.map(comment => (
           <Comments key={comment.id} comments={comment} />

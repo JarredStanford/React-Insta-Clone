@@ -5,6 +5,9 @@
   margin: auto;
 }
 
+#no {
+  display: none;
+}
 .username {
   display: flex;
   flex-direction: row;

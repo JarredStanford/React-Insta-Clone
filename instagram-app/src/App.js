@@ -15,28 +15,34 @@ class App extends React.Component {
     super();
     this.state = {
       userData: [],
-      username: ""
+      username: "",
+      display: ""
     };
   }
 
   componentDidMount() {
+    dummyData.map(user => {
+      return (user.display = "");
+    });
     this.setState({
-      userData: dummyData
+      userData: dummyData,
+      display: ""
     });
   }
 
   search = e => {
-    e.preventDefault();
-    const searchTerm = this.state.username;
-    const filteredData = this.state.userData.filter(user =>
-      user.username.includes(searchTerm)
-    );
-    this.setState({
-      userData: filteredData,
-      username: ""
+    const searchTerm = e.target.value;
+
+    this.state.userData.map(user => {
+      if (user.username.includes(searchTerm)) {
+        return (user.display = "");
+      } else return (user.display = "no");
     });
   };
-
+  /*this.setState({
+      userData: filteredData,
+      username: ""
+    });*/
   handleChanges = e => {
     this.setState({
       [e.target.name]: e.target.value

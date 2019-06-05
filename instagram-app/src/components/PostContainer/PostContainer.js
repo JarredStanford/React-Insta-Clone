@@ -7,7 +7,7 @@ import "./PostContainer.css";
 
 const PostContainer = props => {
   return (
-    <div className="post-container">
+    <div id={props.dataOnProps.display} className="post-container">
       <div className="username">
         <a href="#">
           <img
@@ -19,7 +19,10 @@ const PostContainer = props => {
       </div>
       <img src={props.dataOnProps.imageUrl} alt="image" />
       <h1>
-        <CommentSection comments={props.dataOnProps.comments} />
+        <CommentSection
+          comments={props.dataOnProps.comments}
+          likes={props.dataOnProps.likes}
+        />
       </h1>
     </div>
   );
