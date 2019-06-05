@@ -10,7 +10,8 @@ class CommentSection extends React.Component {
     super();
     this.state = {
       commentsData: [],
-      text: ""
+      text: "",
+      likes: 0
     };
   }
 
@@ -24,7 +25,6 @@ class CommentSection extends React.Component {
 
   addLike = e => {
     e.preventDefault();
-    console.log(this.state.likes);
     this.setState(prevState => {
       return {
         likes: prevState.likes + 1
@@ -35,7 +35,7 @@ class CommentSection extends React.Component {
   addNewComment = e => {
     e.preventDefault();
     const newComment = {
-      username: "SylviaPlath",
+      username: localStorage.getItem("username"),
       id: this.state.commentsData.length + 1,
       text: this.state.text
     };

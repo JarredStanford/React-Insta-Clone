@@ -7,23 +7,25 @@ import "./PostContainer.css";
 
 const PostContainer = props => {
   return (
-    <div id={props.dataOnProps.display} className="post-container">
-      <div className="username">
-        <a href="#">
-          <img
-            src={props.dataOnProps.thumbnailUrl}
-            alt={props.dataOnProps.timestamp}
+    <div className={props.dataOnProps.display}>
+      <div className="post-container">
+        <div className="username">
+          <a href="#">
+            <img
+              src={props.dataOnProps.thumbnailUrl}
+              alt={props.dataOnProps.timestamp}
+            />
+          </a>
+          <p>{props.dataOnProps.username}</p>
+        </div>
+        <img src={props.dataOnProps.imageUrl} alt="UserImage" />
+        <h1>
+          <CommentSection
+            comments={props.dataOnProps.comments}
+            likes={props.dataOnProps.likes}
           />
-        </a>
-        <p>{props.dataOnProps.username}</p>
+        </h1>
       </div>
-      <img src={props.dataOnProps.imageUrl} alt="image" />
-      <h1>
-        <CommentSection
-          comments={props.dataOnProps.comments}
-          likes={props.dataOnProps.likes}
-        />
-      </h1>
     </div>
   );
 };

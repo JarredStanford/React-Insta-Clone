@@ -4,8 +4,10 @@ import PropTypes from "prop-types";
 const Comments = props => {
   return (
     <div>
-      <p>{props.comments.username}</p>
-      <p>{props.comments.text}</p>
+      <p>
+        <span>{props.comments.username}</span>
+        {props.comments.text}
+      </p>
     </div>
   );
 };
