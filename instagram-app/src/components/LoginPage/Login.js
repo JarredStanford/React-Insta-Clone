@@ -1,5 +1,11 @@
 import React from "react";
 
+//components
+import LoginBox from "./LoginBox";
+
+//styles
+import "./Login.css";
+
 class Login extends React.Component {
   constructor() {
     super();
@@ -8,7 +14,6 @@ class Login extends React.Component {
       password: ""
     };
   }
-
   loginHere = e => {
     e.preventDefault();
     window.location.reload();
@@ -19,25 +24,18 @@ class Login extends React.Component {
     this.setState({
       [e.target.name]: e.target.value
     });
+    console.log(this.state.username);
   };
 
   render() {
     return (
-      <div>
-        <h1>Welcome to LambdaGram</h1>
-        <form onSubmit={this.loginHere}>
-          <input
-            placeholder="Username i.e Allison"
-            onChange={this.handleChanges}
-            name="username"
-          />
-          <input
-            placeholder="Password i.e. Allison"
-            onChange={this.handleChanges}
-            name="password"
-          />
-          <button>Login</button>
-        </form>
+      <div className="login">
+        <LoginBox
+          login={this.loginHere}
+          handle={this.handleChanges}
+          username={this.state.username}
+          password={this.state.password}
+        />
       </div>
     );
   }

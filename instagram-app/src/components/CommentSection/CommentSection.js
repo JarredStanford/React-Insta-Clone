@@ -1,6 +1,9 @@
 import React from "react";
 import Comments from "./Comments";
 import CommentInput from "./CommentInput";
+import Heart from "./hearticon";
+import IconButton from "@material-ui/core/IconButton";
+import { StylesProvider } from "@material-ui/styles";
 
 //styles
 import "./CommentSection.css";
@@ -24,7 +27,6 @@ class CommentSection extends React.Component {
   }
 
   addLike = e => {
-    e.preventDefault();
     this.setState(prevState => {
       return {
         likes: prevState.likes + 1
@@ -55,7 +57,11 @@ class CommentSection extends React.Component {
     return (
       <section className="comment-section">
         <div className="comment-icons">
-          <button onClick={this.addLike}>like</button>
+          <StylesProvider injectFirst>
+            <IconButton onClick={this.addLike} className="like-button">
+              <Heart />
+            </IconButton>
+          </StylesProvider>
           <button>comments</button>
         </div>
         <div className="like-counter">

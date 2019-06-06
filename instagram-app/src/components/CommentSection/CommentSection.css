@@ -15,3 +15,7 @@
 .like-counter p {
   margin: 0;
 }
+
+.like-button {
+  padding: 0;
+}
