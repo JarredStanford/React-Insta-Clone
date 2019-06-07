@@ -1,25 +1,3 @@
-.post-container {
-  width: 600px;
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-}
-
 .no {
   display: none;
-}
-.username {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-}
-
-.username a img {
-  width: 24px;
-  height: 24px;
-}
-
-.username p {
-  margin: 0;
-  margin-left: 1rem;
 }
