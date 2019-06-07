@@ -38,7 +38,6 @@ class CommentSection extends React.Component {
 
   addNewComment = e => {
     e.preventDefault();
-    console.log(this.props.time);
     const newComment = {
       username: localStorage.getItem("username"),
       id: this.state.commentsData.length + 1,
@@ -58,7 +57,6 @@ class CommentSection extends React.Component {
 
   render() {
     const dateFormat = this.props.time.split(",")[0].replace(/(th)/g, ",");
-    console.log(dateFormat);
     return (
       <CommentContainer>
         <IconHolder>
